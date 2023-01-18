@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right top, #21ad1f, #90c7b8, #7abf8f, #41bae9, #41e9c2);
+  display: flex; /*Para centralizar o container principal*/
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.hide {
+  display: none !important;
+}
+
+.container { /*O que abraça todo conteudo*/
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #1d1e33;
+  padding: 2rem; /*Para afastar o conteudo das extremidades*/
+}
+
+/* IMC Form - o formulario*/
+#calc-container h2 {
+  text-align: center;
+  margin-bottom: 2rem; /*Afasta os elementos q vem dps dele*/
+}
+
+.form-inputs { /*Classe q abraça os inputs*/
+  display: flex;
+  flex-direction: column; /*Formato em coluna/Um em baixo do outro*/
+  justify-content: space-between; /*Para espacar igualmente os elementos*/
+}
+
+.form-control {
+  display: flex;
+  flex: 1; /*ocupar largura maxima*/
+  flex-direction: column;
+  margin-bottom: 1rem; /*Para afastar um Input do outro*/
+}
+
+.form-control label {
+  font-weight: bold; /*Negrito*/
+  margin-bottom: 0.6rem; /*Para afastar a lebel do input*/
+  color: #ccc;
+}
+
+.form-control input {
+  padding: 1rem 0.5rem;
+}
+
+.action-control {/*Os botões*/
+  display: flex;
+  justify-content: space-between; /*Cada botão fica do seu lado separado*/
+  margin-top: 2rem;
+  gap: 1rem; /*Distancia entre os elementos*/
+}
+
+button {
+  text-transform: uppercase; /*Para mudar o texto dos botoes para caixa alta*/
+  padding: 1rem 1.5rem; /*Espacamento interno de botão*/
+  background-color: #36f48b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+  flex: 1; /*Espacamento entre os botoes*/
+}
+
+button:hover { /*Eleito no botão*/
+  opacity: 1;
+}
+
+#clear-btn {
+  background-color: #444;
+}
+
+/* Table */
+#result-container {
+  text-align: center;
+}
+
+#imc-number {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+#imc-info {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+#result-container h3 {
+  margin-top: 1rem;
+  color: #dfdfdf;
+}
+
+#result-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#imc-table {
+  margin: 1.5rem 0; /*Para afastar a tabela dos outros elementos*/
+  font-size: 0.8rem;
+}
+
+.table-header {
+  font-weight: bold; /*Negrito*/
+  color: #ccc;
+}
+
+.table-header,
+.table-data {
+  display: flex;
+  justify-content: space-between; /*Espacamento igual entre eles*/
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem; /*Para afastar os itens*/
+  border-bottom: 1px solid #444; /*Borda*/
+  text-align: center;
+}
+
+.table-header h4,
+.table-data p {
+  flex: 1; /*Para igualar o tamanho entre eles/centralizado*/
+}
+
+.table-header h4:nth-child(3), /*Pega o elemento especifico para modificar*/
+.table-data p:nth-child(3) {
+  max-width: 80px;
+}
+
+#back-btn {
+  align-self: center;
+}
+
+.good {
+  color: #12db34;
+}
+
+.low {
+  color: #dbce12;
+}
+
+.medium {
+  color: #db6212;
+}
+
+.high {
+  color: #db1912;
+}
